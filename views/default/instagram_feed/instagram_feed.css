@@ -1,0 +1,194 @@
+/*
+ *
+ * Instagram Feed CSS
+ *
+ * @author Per Jensen
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU General Public License v2
+ * @copyright Copyright (c) 2019, Per Jensen
+ *
+ */
+
+ /* ***************************************
+ 	MISC
+ *****************************************/
+.elgg-button-instagram {
+	background: none;
+	border: 1px solid #F66;
+	color: #f66;
+}
+.elgg-button-instagram:hover,
+.elgg-button-instagram:focus {
+	background-color: rgba(246, 111, 102, 0.4);
+	color: #990000;
+}
+#instagram-user-info {
+    border: 1px solid #e6e6ea;
+    padding: 1rem;
+    margin: 1rem 0;  
+}
+#instagram-user-info .elgg-image img {
+     border-radius: 50%; 
+}
+#instagram-feed-canvas {
+	list-style: none;  
+}
+#instagram-feed-canvas li > a {
+	line-height: 1;  
+}
+#instafeed .elgg-gallery {
+	margin: 0 -.5rem;
+}
+#instafeed .elgg-gallery > li {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex: 1 0 26%;
+	padding: .5rem;
+}
+/* ***************************************
+	MODAL
+*****************************************/
+.blocker {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 1;
+	padding: 20px;
+	box-sizing: border-box;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+.blocker:before {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	vertical-align: middle;
+	margin-right: -0.05em;
+}
+.blocker.behind {
+	background-color: transparent;
+}
+.modal {
+	display: none;
+	vertical-align: middle;
+	position: relative;
+	z-index: 2;
+	box-sizing: border-box;
+	background: #fff;
+	text-align: left;
+}
+.modal a.close-modal {
+	display: none;
+}
+.modal-content {
+	display: flex;
+	flex-direction: row;
+	max-width: 915px;
+	font-size: 90%;
+}
+.modal-body img {
+	display: block;
+	max-width: 100%;
+}
+.modal-footer {
+	width: 38%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 1rem;
+}
+.modal-caption-user {
+	display: flex;
+	align-items:: center;
+	padding-bottom: .75rem;
+}
+.modal-caption-user .elgg-avatar-small img {
+    max-width: 32px;
+    max-height: 32px;
+}
+.modal-caption-user .link {
+	padding-top: .25rem;
+}
+.modal-caption-user .link a {
+	color: #2d3047;
+	font-weight: 600;
+	text-decoration: none;
+}
+.modal-counts {
+	padding-top: .5rem;
+}
+.modal-counts::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+	content: "\f004";
+	margin-right: .3rem;
+}
+.modal-counts span::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 400;
+	content: "\f075";
+	margin: 0 .3rem 0 1rem;
+}
+.modal-button {
+	text-align: right;
+	padding-top: 1rem;
+}
+.modal-spinner {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	padding: 12px 16px;
+	border-radius: 5px;
+	background-color: #111;
+	height: 20px;
+}
+.modal-spinner > div {
+	border-radius: 100px;
+	background-color: #fff;
+	height: 20px;
+	width: 2px;
+	margin: 0 1px;
+	display: inline-block;
+	-webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+	animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+.modal-spinner .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+.modal-spinner .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+.modal-spinner .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+/* ***************************************
+	RESPONSIVE
+*****************************************/
+@media screen and (max-width: 50rem) {
+	#instagram-user-info .elgg-body {
+		margin: .5rem 0 1rem;  
+	}
+	#instagram-user-info {
+		flex-direction: column !important;
+	}
+	#instafeed .elgg-gallery > li {
+		flex: 1 0 34%;
+	}
+	.modal-content {
+		flex-direction: column;
+		max-width: 640px;
+	}
+	.modal-footer {
+		width: 100%;
+	}
+}
