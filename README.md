@@ -11,7 +11,7 @@ Instagram Feed
 
 Users must generate an Instagram Access Token to display their feed.
 
-- Go to Settings > Configure your tools > Instagram Feed and follow the instructions
+- Go to Instagram > Add Instagram Feed and follow the instructions
 
 ## Note
 
